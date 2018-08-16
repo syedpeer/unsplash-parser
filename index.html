@@ -1,0 +1,82 @@
+<html>
+	<head>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.17/vue.min.js"></script>
+		<style>
+			img {
+				max-width: 400px;
+				max-height: 200px;
+			}
+			textarea {
+				width: 400px;
+				height: 200px;
+			}
+			.gallery {
+				height: 440px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="gallery" class="row">
+		<center><h1>Welcome to Unsplash Vue.js Image Search</h1></center>
+		<hr>
+		<form id="submission" @submit.prevent="processForm">
+		<div class="col-md-offset-4 col-md-2">
+		<p>Unsplash has been used in everything from Apple keynotes to the default theme shipped with Wordpress. You've probably already seen a photo from Unsplash, you just didn't know it.</p>
+		<p>Unsplash started as a simple tool for creators. The concept was born from the pain we had in finding great, usable imagery. Today, Unsplash is a platform fueled by a community that has generously gifted hundreds of thousands of their own photos.</p>
+		<p>Apply <a href="https://unsplash.com/developers">here</a> for an API key.</p>
+		<p>Just type any theme in the <b>apiQuery</b> field and you will get free images to embed on your website.</p>
+		</div>
+		<div class="col-md-4">
+		<label>Enter your apiUrl:</label>
+		<input type="text" id="apiUrl" value="https://api.unsplash.com/search/photos/" required />
+		<br />
+		<br />
+		<label>Enter your client_id:</label>
+		<input type="text" id="client_id" v-model="client_id" required />
+		<br />
+		<br />
+		<label>Enter your apiQuery:</label>
+		<input type="text" id="apiQuery" v-model="apiQuery" required />
+		<br />
+		<hr />
+		<button type="submit" form="submission">Search</button>
+		</div>
+		<div class="col-md-2">
+		</div>
+		</form>
+		<div class="clearfix"></div>
+		<hr>
+		<div v-for="rx in result" class="col-md-4 gallery">
+			<img :src="rx.urls.small" />
+			<p>Author: <a :href="rx.links.html">{{ rx.user.name }}</a></p>
+			<textarea disabled>Embed this image in your article:
+<img src="{{ rx.urls.small }}" />
+<p>Author: <a href="{{ rx.links.html }}">{{ rx.user.name }}</a></p></textarea>
+			<br>
+		</div>
+		</div>
+		<script>
+		var apiUrl = document.getElementById("apiUrl").value
+		var app = new Vue({
+			el: '#gallery',
+			data: {
+				client_id: '',
+				apiQuery: '',
+				apiUrl: '',
+				result: []
+			},
+			methods: {
+				processForm: function () {
+					var requestUrl = apiUrl + '?' + 'client_id=' + app.client_id + '&' + 'query=' + app.apiQuery
+					$.getJSON(requestUrl, function (data) {
+						app.result = data["results"];
+					});
+				}
+			}
+		});
+		</script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+	</body>
+</html>
