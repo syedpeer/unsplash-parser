@@ -1,6 +1,6 @@
-# Unsplash Vue js Image Search
+# Unsplash Vue.js Image Search
 
-This is a Vue.js example of form handling and json / list processing in a least amount of code. Also this is an [Unsplash](https://unsplash.com/) API search engine with the possibility to easily get the embeded code for you article. Check out the [demo](https://unsplash.sutlxwhx.pw/index.html) or see how it looks [here](https://github.com/sutlxwhx/Unsplash-Vue.js-Image-Search/blob/master/demo.png).
+This is a Vue.js example of form handling and json / list processing in a least amount of code. Also this is an [Unsplash](https://unsplash.com/) API search engine with the possibility to easily get the embeded code for you article. Check out the [demo](https://unsplash.sutlxwhx.pw/index.html) or see how it looks [here](https://raw.githubusercontent.com/sutlxwhx/Unsplash-Vue.js-Image-Search/master/demo.png).
 
 ## Features
 
