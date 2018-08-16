@@ -31,7 +31,7 @@
 		</style>
 	</head>
 	<body>
-		<div id="gallery" class="row">
+		<div id="unsplash" class="row">
 		<center><h1>Unsplash Vue.js Image Search</h1></center>
 		<hr>
 		<form id="submission" @submit.prevent="processForm">
@@ -73,7 +73,7 @@
 		<script>
 		var apiUrl = document.getElementById("apiUrl").value
 		var app = new Vue({
-			el: '#gallery',
+			el: '#unsplash',
 			data: {
 				client_id: '',
 				apiQuery: '',
