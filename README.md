@@ -1,7 +1,6 @@
 # Get embeddable images from Unsplash using vue.js
 
-This is a Vue.js example of form handling and json and list processing in a least amount of code.
-<br />Also this is an [Unsplash](https://unsplash.com/) API search engine with the ability to provide the embeddable images for you article.
+This is a vue.js example of how you can recieve a json response, process it and retrieve the neccessary elements in DOM in a foor loop. It's using [Unplash](https://unsplash.com/) to search for images.
 <br />Check out the [demo](https://unsplash.sutlxwhx.pw/) or see how it looks [here](https://raw.githubusercontent.com/sutlxwhx/vue.js-unsplash-image-search/master/img/demo.png).
 
 ## Features
