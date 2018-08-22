@@ -1,0 +1,18 @@
+body {
+    background - image: url('/img/background.png');
+}
+img {
+    max - width: 400 px;
+    max - height: 200 px;
+}
+textarea {
+    width: 400 px;
+    height: 200 px;
+}
+.gallery {
+    height: 440 px;
+    display: inline - block;
+}
+.styled {
+    background - color: white;
+}
