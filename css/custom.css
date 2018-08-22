@@ -1,18 +1,25 @@
 body {
-    background - image: url('/img/background.png');
+    background-image: url('/img/background.png');
 }
 img {
-    max - width: 400 px;
-    max - height: 200 px;
+    max-width: 400px;
+    max-height: 200px;
+}
+li {
+	margin-bottom: 5px;
 }
 textarea {
-    width: 400 px;
-    height: 200 px;
+    width: 400px;
+    height: 200px;
 }
 .gallery {
-    height: 440 px;
-    display: inline - block;
+    height: 440px;
+    display: inline-block;
+}
+.row {
+	margin-right: 0px;
+	margin-left: 0px;
 }
 .styled {
-    background - color: white;
+    background-color: white;
 }
