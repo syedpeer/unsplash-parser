@@ -2,7 +2,7 @@
 
 This is a Vue.js example of form handling and json and list processing in a least amount of code.
 <br />Also this is an [Unsplash](https://unsplash.com/) API search engine with the ability to provide the embeddable images for you article.
-<br />Check out the [demo](https://unsplash.sutlxwhx.pw/) or see how it looks [here](https://raw.githubusercontent.com/sutlxwhx/Unsplash-Vue.js-Image-Search/master/demo.png).
+<br />Check out the [demo](https://unsplash.sutlxwhx.pw/) or see how it looks [here](https://raw.githubusercontent.com/sutlxwhx/vue.js-unsplash-image-search/master/img/demo.png).
 
 ## Features
 
